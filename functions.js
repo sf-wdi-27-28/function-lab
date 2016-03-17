@@ -1,8 +1,7 @@
 // # Functions Drills Lab
 //
 // Practice creating functions!
-//
-// ### `maxOrMin(num1, num2, max)`
+//### `maxOrMin(num1, num2, max)`
 //
 // Define a function `maxOrMin` that takes three parameters: two numbers and a boolean.
 // Have it return the larger of the two numbers if the boolean is true, otherwise have
@@ -104,15 +103,39 @@ primes(75);
 //
 // Write a function called `filter` that filters elements of an array based on a callback function.
 //
-// `filter` takes in an array and another function (a callback).  The callback for `filter` will take in a number and return `true` or `false` (like `isPrime` does!).
-// Your `filter` function should create a new array. The `filter` function should use the callback on each element of the original array. When the callback returns true for an element, `filter` should add that element to the new array. Make `filter` return the new array at the end!
+// `filter` takes in an array and another function (a callback).
+// The callback for `filter` will take in a number and return `true` or `false` (like `isPrime` does!).
+// Your `filter` function should create a new array.
+// The `filter` function should use the callback on each element of the original array. When the callback returns true for an element, `filter` should add that element to the new array. Make `filter` return the new array at the end!
 //
 // ```js
 // // starter structure for our filter function
-// var filter = function(arr, callback) {
-// // YOUR CODE IN HERE!
-//
-// }
+
+
+var filter = function(arr, callback) {
+  var newArr = [];
+    for(var i=0; i<arr.length; i++) {
+      if (isPrime(arr[i])){
+        newArr.push(arr[i]);
+      }
+    }
+  return newArr;
+};
+
+var isPrime = function(num) {
+  if (num < 2) {
+    return false;
+  }
+  for (var i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+filter ([21,25,40,17,11,3], isPrime);
+
 //
 // // example code to test your function with:
 // var isOdd = function(num) {
