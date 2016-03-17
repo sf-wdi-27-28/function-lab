@@ -82,6 +82,22 @@ function filter(arr) {
 filter ([4,5,6,6,6,67,7,7,7]);
 
 
+/// or
+
+
+function filter(arr, callback) {
+  return arr.filter(callback);
+}
+
+function isOdd(num) {
+    return num % 2 !== 0;
+}
+
+
+filter ([5,4,2,33,4,5,7], isOdd);
+
+
+
 // you could also try using your isPrime function as the callback:
 
 
