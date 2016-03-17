@@ -19,6 +19,35 @@ function maxOrMin (a, b, bool) {
 /*Takes array of numbers and returns sum of each number multiplied by its
 index.*/
 
-function sillySum(arr) {
-  
+
+var sillySum = [2, 4, 5, 6];
+var result = 0;
+
+for (i = 0; i < sillySum.length; i++){
+    result += i * sillySum[i];
+}
+
+console.log(result);
+
+//4. isPrime
+//Note: we don't know why the "return true;'' lies outside the 'for-loop'; if we
+  //included it in the loop, it stopped working.
+
+function isPrime(input) {
+  if (input < 2) {
+    return false;
+  }
+  for (var i = input-1; i > 1; i--) {
+    if (input % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+// filter
+
+function filter(arr, callback) {
+  return filteredArray = arr.filter(callback);
 }
