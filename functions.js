@@ -1,5 +1,19 @@
 // YOUR CODE HERE
 
+//MaxOrMin
+function maxOrMin(num1, num2, max) {
+	var sorted = [num1, num2].sort(function(a, b){
+		return a - b;
+	});
+	if(max) {
+		return sorted [1];
+	} else {
+		return sorted[0];
+	}
+}
+
+
+
 //Silly Sum
 // Write a function that takes an array of numbers and returns the sum of each number multiplied by its index.
 
