@@ -28,3 +28,12 @@ function isPrime (num) {
   }
   return true;
 }
+
+var numSquare = function(max) {
+  var squaresArr = [];
+
+  for (i = 1; i * i <= max; i += 1) {
+    squaresArr.push(i * i);
+  }
+  console.log (squaresArr);
+};
