@@ -20,3 +20,23 @@ function sillySum(array) {
 }
 
 sillySum(randomNumbers);
+
+//numSquare(max)
+
+function numSquare(max) {
+  var squaredArray = [];
+  for (i = 0; i < max; i++) {
+    var square = i * i;
+    if (square <= max) {
+        squaredArray.push(square);
+    }
+  }
+  return squaredArray;
+}
+
+numSquare(100);
+
+// function takes number
+// genertate perfect squares as long as they are <= the number
+//push the perfect squares into an array
+//return array
