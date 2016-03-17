@@ -1,6 +1,9 @@
-# Functions Drills Lab
+//w1 d3
+//Morgan Sharif
 
-Practice creating functions!
+//# Functions Drills Lab
+
+//Practice creating functions!
 
 //1. `maxOrMin(num1, num2, max)`
 //    Define a function `maxOrMin` that takes three parameters: two numbers and a boolean.  Have it return the larger of the two numbers if the boolean is true, otherwise have it return the lesser of the numbers.
@@ -42,7 +45,7 @@ numSquare(37);
 //    Create a function that returns true if the number passed in is a prime number and false if not.
 
 function isPrime(num){
-  if (num === 1){    //primes are not 1
+  if (num < 2){
     return false;
   }
   for (var i = 2; i < num; i++){
@@ -78,14 +81,20 @@ primes(104);
 //     for `filter` will take in a number and return `true` or `false` (like `isPrime` does!).
 //     Your `filter` function should create a new array. The `filter` function
 //     should use the callback on each element of the original array. When the callback
-//     returns true for an element, `filter` should add that element to the new array. 
+//     returns true for an element, `filter` should add that element to the new array.
 //     Make `filter` return the new array at the end!
+
 
 
 // starter structure for our filter function
 var filter = function(arr, callback) {
-// YOUR CODE IN HERE!
-
+  filteredArr =[];
+  for (var i = 1; i < arr.length; i++){
+    if (callback(arr[i])){            // passes the array's value (using array[i]), and if true, gets added to the new list
+      filteredArr.push(arr[i]);
+    }
+  }
+  return filteredArr;
 }
 
 // example code to test your function with:
