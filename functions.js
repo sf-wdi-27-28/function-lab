@@ -50,20 +50,32 @@ console.log(numSquare(100));
 // isPrime(num)
 
 function isPrime(num){
-
-  for (i = 2; i < num; i++) {  // can't start loop at 0 or 1 bc it will give a false response
-    if (num % i === 0){
-      return false;
-    } else {
-      return true;
+  if (num < 2){
+    return false;
+  }else {
+    for (i = 2; i < num; i++) {
+      if (num % i === 0){
+        return false;
+      } else {
+        return true;
+      }
     }
   }
 }
 
-isPrime(7);
-
 // primes(max)
-// reliant on isPrime(), can't do.
+// Couldn't figure this one out.  Here's what I ended up with.
+
+
+var primeArray = [];
+function primes(max){
+  for ( i = 0; i < max.length; i++ ){
+    if ( isPrime(i) == true ){
+      primeArray.push(i);
+      console.log(i);
+    }
+  }
+};
 
 
 // filter
