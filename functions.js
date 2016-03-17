@@ -42,3 +42,15 @@ function numSquare(y){
 }
 
 numSquare(3);
+
+### `isPrime(num)`
+
+Create a function that returns true if the number passed in is a prime number and false if not.
+
+function isPrime(num){
+  if (num % num ===0){
+    return true;
+
+  } else
+  return false;
+}
