@@ -37,17 +37,20 @@ console.log(multi);
 Create a function called `numSquare` that will return an array of all perfect square numbers up to, but not exceeding a max number.
 
 var myArray=[1,2,3,4];
+var squareArray=[];
 var square;
 function numSquare(y){
   for (var i=0; i < myArray.length; i++){ // SYNTAX ERRORS!
    if ( y < myArray[i]) {
     square = myArray[i] * myArray[i];
+    squareArray.push(square);
     console.log(square);
     }
     else console.log("number is bigger");
 }
-}
+console.log(squareArray);
 
+}
 numSquare(3);
 
 ### `isPrime(num)`
