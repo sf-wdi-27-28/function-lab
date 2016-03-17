@@ -30,7 +30,7 @@ console.log(sillySum([2,4,6,8]));
 
 // numSquare(max)
 // I'm pretty sure there's a better way of doing this -
-// I'm processing considerably more numbers than I'm using... but after really struglling with this one, this approach worked!!!
+// I'm processing considerably more numbers than I'm using... but after really struggling with this one, this approach worked!!!
 // Kinda lol'ing at it's ridiculousness, though.
 
 function numSquare(max){
@@ -48,11 +48,23 @@ function numSquare(max){
 console.log(numSquare(100));
 
 // isPrime(num)
-// Honestly math is not my strong suit and I really wasn't able to figure this one out, I think more due to a lack of understanding on how to find a prime number in general.
-// Will try to reapproach in the morning.
+
+function isPrime(num){
+
+  for (i = 2; i < num; i++) {  // can't start loop at 0 or 1 bc it will give a false response
+    if (num % i === 0){
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+isPrime(7);
 
 // primes(max)
 // reliant on isPrime(), can't do.
+
 
 // filter
 var filter = function filterer(arr, callback) {
