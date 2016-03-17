@@ -1,12 +1,19 @@
 // YOUR CODE HERE
+### `maxOrMin(num1, num2, max)`
 
+Define a function `maxOrMin` that takes three parameters: two numbers and a boolean.  Have it return the larger of the two numbers if the boolean is true, otherwise have it return the lesser of the numbers.
 
+ffunction maxOrMin(x,y,z){
+ if ( z == true){
+     console.log("its true!");
+   if ( x < y){
+     return y;
+   } else return x;
 
-
-
-
-
-
+ }
+ console.log("it's false");
+}
+maxOrMin(6,4,true);
 
 
 
