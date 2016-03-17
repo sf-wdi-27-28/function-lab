@@ -48,7 +48,26 @@ function numSquare(max){
 console.log(numSquare(100));
 
 // isPrime(num)
-// Honestly math is not my strong suit and I really wasn't able to figure this one out, I think due to a lack of a complete understanding of what primes even are.
+// Honestly math is not my strong suit and I really wasn't able to figure this one out, I think more due to a lack of understanding on how to find a prime number in general.
+// Will try to reapproach in the morning.
 
 // primes(max)
-// reliant on isPrime()
+// reliant on isPrime(), can't do.
+
+// filter
+var filter = function filterer(arr, callback) {
+  var filteredArray = [];
+  for (var i = 0; i < arr.length; i++){
+    if (callback (arr[i]) ){
+      filteredArray.push(arr[i]);
+    }
+  }
+  return filteredArray;
+};
+
+// example code to test your function with:
+var isOdd = function(num) {
+    return num % 2 !== 0;
+};
+filter ([0,1,2,3,4,5], isOdd);
+// returns [1, 3, 5]
