@@ -36,6 +36,38 @@ function numSquare(max) {
 
 numSquare(100);
 
-//isPrime
+//isPrime(Num)
+function isPrime(num) {
+    if (num < 2) {
+        return false;
+    }
+    for (var i = num - 1; i > 1; i--) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
 
-//filter
+isPrime(2);
+isPrime(17);
+isPrime(9);
+
+//filter(arr, callback)
+
+var filter = function(arr, callback) {
+    var filteredArr = [];
+    for (i = 0; i < arr.length; i++) {
+      if(callback(arr[i])) {
+        filteredArr.push(arr[i]);
+      }
+    }
+    return filteredArr;
+};
+
+// example code to test your function with:
+var isOdd = function(num) {
+  return num % 2 !== 0;
+};
+filter ([0,1,2,3,4,5], isOdd);
+// returns [1, 3, 5]
