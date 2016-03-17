@@ -36,7 +36,6 @@ function numSquare(max) {
 
 numSquare(100);
 
-// function takes number
-// genertate perfect squares as long as they are <= the number
-//push the perfect squares into an array
-//return array
+//isPrime
+
+//filter
