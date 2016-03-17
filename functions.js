@@ -55,6 +55,18 @@ isPrime(9);
 
 //filter(arr, callback)
 
+/*
+Not sure why the javascript console in Chrome spits out Array[3] on the filter problem rather than just [1, 3, 5].
+
+The result when I plug in isOdd as a function and the example array [1,2,3,4,5] is:
+
+0 :  1
+1 :  3
+2 :  5
+
+Whyyyyy?
+*/
+
 var filter = function(arr, callback) {
     var filteredArr = [];
     for (i = 0; i < arr.length; i++) {
